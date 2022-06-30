@@ -1,0 +1,44 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background: #36454f;
+}
+
+.header h1 {
+  line-height : 100%;
+  color : white;
+  font-family: "Franklin Gothic Medium", Medium, serif;
+  letter-spacing: 3px;
+}
+
+.legend {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    line-height: 18px;
+    color: #777;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+.legend h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
