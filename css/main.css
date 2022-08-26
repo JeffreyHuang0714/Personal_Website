@@ -1,0 +1,64 @@
+body {
+  background: url('img/DC3_GCAS.jpg');
+  background-size: cover;
+  margin: 0;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 100px auto;
+  min-height: 100vh;
+
+  grid-template-areas:
+    "h h"
+    "m m";
+}
+
+.header {
+  grid-area: h;
+  background: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.8));
+  border-bottom: 2px solid gray;
+}
+
+.header ul {
+    list-style-type: none;
+    margin: auto;
+    padding: auto;
+}
+
+.header li {
+    float: left;
+}
+
+.header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 39px 16px;
+    text-decoration: none;
+}
+
+.header li a:hover {
+    background-color: #111;
+}
+
+.main {
+  grid-area: m;
+  background: rgba(0,0,0,0.8);
+}
+
+.main h1 {
+  color: white;
+  font-family: Garamond, serif;
+  text-align: center;
+}
+
+.main img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
