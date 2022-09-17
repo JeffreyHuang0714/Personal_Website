@@ -1,0 +1,141 @@
+body {
+  background: #004070;
+  background-size: cover;
+  margin: 0;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 100px auto;
+  min-height: 100vh;
+
+  grid-template-areas:
+    "h h"
+    "m m";
+}
+
+.header {
+  grid-area: h;
+  background: linear-gradient(rgba(0,0,0,1),rgba(0,0,0,0.8));
+  border-bottom: 2px solid gray;
+}
+
+.header ul {
+    list-style-type: none;
+    margin: auto;
+    padding: auto;
+}
+
+.header li {
+    float: left;
+}
+
+.header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 40px 16px;
+    text-decoration: none;
+}
+
+.header li a:hover {
+    background-color: #111;
+}
+
+.main {
+  grid-area: m;
+  background: rgba(0,0,0,0.8);
+  padding: 32px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 1fr;
+
+  grid-template-areas:
+    "lt rp"
+    "lb rp";
+}
+
+.left_top{
+  grid-area: lt;
+  margin: 1rem;
+}
+
+.left_bottom{
+  grid-area: lb;
+  margin: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3.2rem 1fr;
+
+  grid-template-areas:
+    "t t"
+    "p1 p2";
+}
+
+.right_part{
+  grid-area: rp;
+  margin: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  grid-template-areas:
+    "i2 i3 i5"
+    "i1 i1 i5"
+    "i1 i1 i4";
+}
+
+.title{
+    grid-area: t;
+    margin: 0.5rem;
+}
+
+.page1{
+    grid-area: p1;
+    margin: 0.5rem;
+}
+
+.page2{
+    grid-area: p2;
+    margin: 0.5rem;
+}
+
+.img1{
+  grid-area: i1;
+  background: url('img/img2.jpg');
+  background-size: cover;
+  background-position: 25%;
+  margin: 0.5rem;
+}
+
+.img2{
+  grid-area: i2;
+  background: url('img/img4.jpg');
+  background-size: cover;
+  margin: 0.5rem;
+}
+
+.img3{
+  grid-area: i3;
+  background: url('img/img3.jpg');
+  background-size: cover;
+  margin: 0.5rem;
+}
+
+.img4{
+  grid-area: i4;
+  background: url('img/img1.jpeg');
+  background-size: cover;
+  margin: 0.5rem;
+}
+
+.img5{
+  grid-area: i5;
+  background: url('img/img5.jpg');
+  background-size: cover;
+  margin: 0.5rem;
+}
