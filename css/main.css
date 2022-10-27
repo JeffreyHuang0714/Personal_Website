@@ -1,0 +1,41 @@
+html,body,#wrapper {
+  height: 100%;
+  background-color: #1b2431;
+}
+
+body{
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+#wrapper{
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  overflow: auto;
+}
+
+.align-items-center {
+  display: flex;
+  align-items: center;
+  justify-content: center; /*Aligns horizontally center */
+}
+
+.cover-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: white;
+  text-shadow: none;
+  background-color: #1b2431;
+  border: .05rem solid black;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
