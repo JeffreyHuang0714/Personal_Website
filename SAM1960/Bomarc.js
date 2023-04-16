@@ -120,6 +120,36 @@ let BomarcSites = {
         "name": "Niagara Falls Air Force Missile Site, BOMARC Site",
         "operator" : "35th Air Defense Missile Squadron",
       }
-    }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.80711649288433,
+          30.388633995010586,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Santa Rosa Island Range Complex Site A-15, BOMARC Site",
+        "operator" : "4751st Air Defense Missile Squadron",
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.62166780365338,
+          30.593586517887772,
+          0
+        ]
+      },
+      "properties": {
+        "name": "Piccolo Field BOMARC Missile Site",
+        "operator" : "4751st Air Defense Missile Squadron",
+      }
+    },
   ]
 };
