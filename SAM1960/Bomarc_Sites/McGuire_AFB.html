@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>McGuire AFB BOMARC Site</title>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="../assets/dist/css/bootstrap.min.css">
+    <link rel="stylesheet", href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="stylesheet" href="../1960MissileAD.css">
+    <script>
+    let BomarcSites = {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -74.441389,
+              40.035,
+              0
+            ]
+          },
+          "properties": {
+            "name": "McGuire AFB BOMARC Site",
+            "operator" : "46th Air Defense Missile Squadron",
+          }
+        },
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">TO TOP</button>
+
+    <nav class="navbar navbar-expand-sm navbar-dark navbar-custom" style="border-bottom: 1px solid grey">
+        <a class="navbar-brand" style="font-weight: bold;">SAM 1960</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../SAM1960.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nike</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown03">
+                <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Project_Nike" target="_blank">Wikipedia</a>
+                <a class="dropdown-item" href="../Nike_Sites.html">Notable Sites</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bomarc</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown03">
+                <a class="dropdown-item" href="https://en.wikipedia.org/wiki/CIM-10_Bomarc" target="_blank">Wikipedia</a>
+                <a class="dropdown-item" href="../Bomarc_Sites.html">Notable Sites</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <h2 style="color:white; padding-top:1rem; padding-left:1rem; padding-right:1rem; text-align: center;" >1960 BOMARC Accident</h2>
+
+      <center>
+        <img src="./Bomarc_img/McAFB.jpg" style="max-width:60%;"></img>
+      </center>
+
+      <h2 style="color:white; padding-top:1rem; padding-left:1rem; padding-right:1rem; text-align: center;" >McGuire AFB BOMARC Site</h2>
+      <h4 style="color:white; padding-bottom:1rem; padding-left:1rem; padding-right:1rem; text-align: center;" >Ocean County, New Jersey</h4>
+
+      <div id="mapId" style="width: 60%; height:70%; margin:auto; z-index:98"></div>
+      <script>
+        let map = L.map('mapId').setView([40.035,-74.441389], 10);
+      </script>
+      <script src = "BomarcSitesJS.js"></script>
+
+      <p style="color:white; padding-left:20%; padding-right:20%; padding-top:1rem; padding-bottom:1rem; font-size:2.5vh">
+        The McGuire AFB BOMARC Site or BOMARC Base No.1 was 218 acres within the "Range and Impact Area" at the Northeast corner of McGuire AFB. It was one of two BOMARC bases of the New York Air Defense Sector. It was the first operational BOMARC base and had both a "Missile Support Area" with a Squadron Operations Center and a "Launch Area" with 56 Mode II Launcher Shelters in 2 flights (e.g., 2 compressor buildings were available to simultaneously get 2 missiles to the "Standby" stage prior to "Fire-up".)
+      </p>
+      <p style="color:white; padding-left:20%; padding-right:20%; padding-bottom:1rem; font-size:2.5vh">
+        On 7 June 1960, an explosion in a helium tank between the missile's fuel tanks took place in Shelter 204 causing a fire in a liquid-fueled, nuclear-tipped BOMARC missile. The fire burned uninhibited for about 30 minutes. Firefighting activities, using water as a suppressant, were conducted for 15 hours. As a result, materials from the shelter flowed under the front shelter doors, down the asphalt apron and street between the row of shelters, and into the drainage ditch.
+      </p>
+      <p style="color:white; padding-left:20%; padding-right:20%; padding-bottom:1rem; font-size:2.5vh">
+        No one was injured in the accident, but the area was severely contaminated with weapons-grade plutonium (WGP), which is still enclosed by a spiked fence that is six feet high and is now known as BOMARC Site RW-01.
+      </p>
+
+      <p style="padding:1rem"> </p>
+
+      <script>
+      // Get the button
+      let mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</html>
