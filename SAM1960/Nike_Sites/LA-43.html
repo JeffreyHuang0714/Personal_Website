@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LA-43</title>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="../assets/dist/css/bootstrap.min.css">
+    <link rel="stylesheet", href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="stylesheet" href="../1960MissileAD.css">
+    <script>
+    let Nikesites = {
+      "type": "FeatureCollection",
+      "features": [
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -118.29416159906795,
+              33.71213054469995,
+              0
+            ]
+          },
+          "properties": {
+            "name": "LA-43 Control Site",
+            "description": "<br>Source: Wikipedia article <a href=\"https://en.wikipedia.org/wiki/List_of_Nike_missile_sites#cite_ref-barflats_12-0\">List of Nike missile sites</a>"
+          }
+        },
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [
+              -118.314166666667,
+              33.7166666666667,
+              0
+            ]
+          },
+          "properties": {
+            "name": "LA-43 Launch Site",
+            "description": "<br>Source: Wikipedia article <a href=\"https://en.wikipedia.org/wiki/List_of_Nike_missile_sites#cite_ref-barflats_12-0\">List of Nike missile sites</a>"
+          }
+        },
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">TO TOP</button>
+
+    <nav class="navbar navbar-expand-sm navbar-dark navbar-custom" style="border-bottom: 1px solid grey">
+        <a class="navbar-brand" style="font-weight: bold;">SAM 1960</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample03">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../SAM1960.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nike</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown03">
+                <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Project_Nike" target="_blank">Wikipedia</a>
+                <a class="dropdown-item" href="../Nike_Sites.html">Notable Sites</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bomarc</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown03">
+                <a class="dropdown-item" href="https://en.wikipedia.org/wiki/CIM-10_Bomarc" target="_blank">Wikipedia</a>
+                <a class="dropdown-item" href="../Bomarc_Sites.html">Notable Sites</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <h2 style="color:white; padding-top:1rem; padding-left:1rem; padding-right:1rem; text-align: center;" >Nike Missile Site LA-43</h2>
+      <h4 style="color:white; padding-bottom:1rem; padding-left:1rem; padding-right:1rem; text-align: center;" >San Pedro, California</h4>
+
+      <div id="mapId" style="width: 60%; height:70%; margin:auto; z-index:98"></div>
+      <script>
+        let map = L.map('mapId').setView([33.7166666666667, -118.314166666667], 11);
+      </script>
+      <script src = "NikeSitesJS.js"></script>
+
+      <p style="color:white; padding-left:20%; padding-right:20%; padding-top:1rem; padding-bottom:1rem; font-size:2.5vh">
+        The LA-43 Nike Missile Site was completed in 1956 and remained in operation until 1974. A group of volunteers from the Nike Historical Society tried to restorated the launch site to a museum in the beginning of this century, just like the SF-88. Unfortunately, the restoration efforts at LA-43 fell through and the museum will not be created.
+      </p>
+      <p style="color:white; padding-left:20%; padding-right:20%; padding-bottom:1rem; font-size:2.5vh">
+        Today, the LA-43 Launch Site is part of the White Point Nature Education Center and Preserve, and the LA-43 Control Site is part of the Battery Leary-Merriam. The control site buildings are using by the Marine Exchange of Southern California and the United States Coast Guard, so it's not open to the general public, but visitors could access the abolished radar towers outside the fence.
+      </p>
+      <center>
+        <img src="./Nike_images/LA43L.jpg" style="max-width:60%;"></img>
+      </center>
+
+      <p style="padding:1rem"> </p>
+
+      <script>
+      // Get the button
+      let mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</html>
